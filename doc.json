@@ -2,5 +2,57 @@
   "name": "Discord",
   "description": "Send discord messages between Brickadia and Discord",
   "author": "Aware",
-  "commands": []
+  "commands": [
+    {
+      "name": "!setEmoji",
+      "description": "Sets user's emoji to specific emoji",
+      "example": "!setEmoji rlcbm :clock:",
+      "args": [
+        {
+          "name": "name",
+          "description": "Exact name of person getting whos emoji is being set",
+          "required": true
+        },
+        {
+          "name": "emoji",
+          "description": "Emoji, wrap in colons :emoji_name:, for server specific emojis use the syntax <:emoji_name:emoji_id>",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "!resetEmoji",
+      "description": "Randomizes user's emoji",
+      "example": "!resetEmoji rlcbm",
+      "args": [
+        {
+          "name": "name",
+          "description": "Exact name of person getting whos emoji is being set",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "config": {
+    "access": {
+      "description": "Comma separate list of users who can set users emojis",
+      "default": "",
+      "type": "string"
+    },
+    "token": {
+      "description": "Discord bot token",
+      "default": "",
+      "type": "password"
+    },
+    "channel": {
+      "description": "Channel ID (18 digits)",
+      "default": "",
+      "type": "string"
+    },
+    "status": {
+      "description": "Status of the bot",
+      "default": "",
+      "type": "string"
+    }
+  }
 }
